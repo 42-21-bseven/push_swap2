@@ -12,11 +12,6 @@ void swap_stack(t_list **list, char ab)
 			*list = (*list)->next;
 			tmp->next = (*list)->next;
 			(*list)->next = tmp;
-//			(*list)->vol = (*list)->next->vol;
-//			(*list)->next->vol = temp;
-//			temp = (*list)->stage;
-//			(*list)->stage = (*list)->next->stage;
-//			(*list)->next->stage = temp;
 		}
 	}
 	ft_write("s", ab);
@@ -52,8 +47,6 @@ void rotate_stack(t_list **list, char ab)
 			temp->next = NULL;
 			ft_lstadd_back(list, temp);
 		}
-//		else
-//			(*list) = NULL;
 	}
 	ft_write("r", ab);
 }

@@ -37,6 +37,17 @@ void bub_sort(int **arr, int len);
 
 int init_args(t_all *all);
 int init_list(t_all *all, int ac, char **av);
+int init_array(t_all *all, t_list *steak, char **av);
+
+void sort_alg(t_all *all);
+
+
+int get_index(t_all *all, t_list *steak);
+int	min_index(t_list *steak);
+int max_index(t_list *steak);
+int is_sorted(t_list *steak);
+int	how_location(int index, t_list *steak);
+int	is_stack_sorted(t_list *steak);
 
 long ft_atoi(const char *str);
 
