@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int init_args(t_all *all)
+void	init_args(t_all *all)
 {
 	all->start_len = all->argc - 1;
 	all->a_stack = NULL;
@@ -8,9 +8,9 @@ int init_args(t_all *all)
 	all->mass = NULL;
 }
 
-int init_array(t_all *all, t_list *steak, char **av)
+int	init_array(t_all *all, t_list *steak, char **av)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	all->mass = malloc(sizeof (int) * all->start_len);

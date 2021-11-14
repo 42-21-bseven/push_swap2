@@ -1,7 +1,6 @@
 #include "push_swap.h"
 
-
-int is_sorted(t_list *steak)
+int	is_sorted(t_list *steak)
 {
 	while (steak->next)
 	{
@@ -35,4 +34,3 @@ int	is_stack_sorted(t_list *steak)
 	}
 	return (1);
 }
-

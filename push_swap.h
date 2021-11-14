@@ -35,7 +35,7 @@ size_t	ft_strlen(const char *s);
 void ft_write(char *psr, char ab);
 void bub_sort(int **arr, int len);
 
-int init_args(t_all *all);
+void init_args(t_all *all);
 int init_list(t_all *all, int ac, char **av);
 int init_array(t_all *all, t_list *steak, char **av);
 

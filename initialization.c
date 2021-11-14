@@ -1,9 +1,9 @@
 #include "push_swap.h"
 
-long ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-	long res;
-	int sign;
+	long	res;
+	int		sign;
 
 	res = 0;
 	sign = 1;
@@ -21,7 +21,7 @@ long ft_atoi(const char *str)
 
 int	chk_int(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -36,22 +36,21 @@ int	chk_int(const char *str)
 	return (0);
 }
 
-int check_unique(t_list *steak, int num)
+int	check_unique(t_list *steak, int num)
 {
 	while (steak)
 	{
 		if (steak->vol == num)
 			return (1);
-
 		steak = steak->next;
 	}
 	return (0);
 }
 
-int init_list(t_all *all, int ac, char **av)
+int	init_list(t_all *all, int ac, char **av)
 {
-	int i;
-	long num;
+	int		i;
+	long	num;
 
 	i = 1;
 	while (i < ac)
@@ -64,7 +63,7 @@ int init_list(t_all *all, int ac, char **av)
 			if (check_unique(all->a_stack, (int)num))
 				return (put_err(""));
 			if (num > 2147483647 || num < -2147483648)
-				return (put_err(""));;
+				return (put_err(""));
 			ft_lstadd_back(&all->a_stack, ft_lstnew((int)num));
 		}
 		i++;

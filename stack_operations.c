@@ -1,8 +1,8 @@
 #include "push_swap.h"
 
-void swap_stack(t_list **list, char ab)
+void	swap_stack(t_list **list, char ab)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	if (*list)
 	{
@@ -17,11 +17,11 @@ void swap_stack(t_list **list, char ab)
 	ft_write("s", ab);
 }
 
-void push_stack(t_list **dest, t_list **srcs, char ab)
+void	push_stack(t_list **dest, t_list **srcs, char ab)
 {
-	t_list *temp;
+	t_list	*temp;
 
-	if(*srcs)
+	if (*srcs)
 	{
 		temp = *srcs;
 		if ((*srcs)->next)
@@ -34,9 +34,9 @@ void push_stack(t_list **dest, t_list **srcs, char ab)
 	ft_write("p", ab);
 }
 
-void rotate_stack(t_list **list, char ab)
+void	rotate_stack(t_list **list, char ab)
 {
-	t_list *temp;
+	t_list	*temp;
 
 	if (*list)
 	{
@@ -51,10 +51,10 @@ void rotate_stack(t_list **list, char ab)
 	ft_write("r", ab);
 }
 
-void rev_rotate_stack(t_list **list, char ab)
+void	rev_rotate_stack(t_list **list, char ab)
 {
-	t_list *temp;
-	t_list *curr;
+	t_list	*temp;
+	t_list	*curr;
 
 	if (*list && (*list)->next)
 	{

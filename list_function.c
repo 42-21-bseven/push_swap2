@@ -2,7 +2,7 @@
 
 t_list	*ft_lstnew(int content)
 {
-	t_list *newelement;
+	t_list	*newelement;
 
 	newelement = (t_list *)malloc(sizeof(t_list));
 	if (newelement)
@@ -39,7 +39,7 @@ t_list	*ft_lstlast(t_list *lst)
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *n;
+	t_list	*n;
 
 	if (lst)
 	{

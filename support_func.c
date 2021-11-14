@@ -8,7 +8,7 @@ int	put_err(char *str)
 
 size_t	ft_strlen(const char *s)
 {
-	const char *str;
+	const char	*str;
 
 	str = s;
 	while (*str)
@@ -16,18 +16,18 @@ size_t	ft_strlen(const char *s)
 	return (str - s);
 }
 
-void ft_write(char *psr, char ab)
+void	ft_write(char *psr, char ab)
 {
 	write (1, psr, ft_strlen(psr));
 	write (1, &ab, 1);
 	write(1, "\n", 1);
 }
 
-void bub_sort(int **arr, int len)
+void	bub_sort(int **arr, int len)
 {
-	int i;
-	int j;
-	int n;
+	int	i;
+	int	j;
+	int	n;
 
 	i = 0;
 	while (i < len)

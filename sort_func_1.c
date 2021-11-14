@@ -1,8 +1,8 @@
 #include "push_swap.h"
 
-int get_index(t_all *all, t_list *steak)
+int	get_index(t_all *all, t_list *steak)
 {
-	int i;
+	int	i;
 
 	while (steak)
 	{
@@ -12,7 +12,7 @@ int get_index(t_all *all, t_list *steak)
 			if (all->mass[i] == steak->vol)
 			{
 				steak->index = i;
-				break;
+				break ;
 			}
 			i++;
 		}
@@ -23,10 +23,11 @@ int get_index(t_all *all, t_list *steak)
 
 int	min_index(t_list *steak)
 {
-	int min_order;
+	int	min_order;
 
 	min_order = steak->index;
-	while (steak != NULL) {
+	while (steak != NULL)
+	{
 		if (steak->index < min_order)
 			min_order = steak->index;
 		steak = steak->next;
@@ -34,11 +35,8 @@ int	min_index(t_list *steak)
 	return (min_order);
 }
 
-int max_index(t_list *steak)
+int	max_index(t_list *steak)
 {
-//	while (steak->next != NULL)
-//		steak = steak->next;
-//	return (steak->index);
 	ft_lstlast(steak);
 	return (steak->index);
 }
