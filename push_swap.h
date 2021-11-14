@@ -9,6 +9,7 @@ typedef struct s_list
 {
 	int 			vol;
 	struct s_list	*next;
+	int				index;
 	int 			stage;
 }							t_list;
 
@@ -16,7 +17,12 @@ typedef struct s_all
 {
 	t_list 			*a_stack;
 	t_list 			*b_stack;
+	int 			argc;
 	int 			start_len;
+	int 			a_len;
+	int 			b_len;
+	int 			a_head_one;
+	int 			a_head_two;
 	int				current_len;
 	int 			min_vol;
 	int 			average;
@@ -31,6 +37,8 @@ void bub_sort(int **arr, int len);
 
 int init_args(t_all *all);
 int init_list(t_all *all, int ac, char **av);
+
+long ft_atoi(const char *str);
 
 void swap_stack(t_list **list, char ab);
 void push_stack(t_list **dest, t_list **srcs, char ab);

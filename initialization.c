@@ -36,22 +36,35 @@ int	chk_int(const char *str)
 	return (0);
 }
 
+int check_unique(t_list *steak, int num)
+{
+	while (steak)
+	{
+		if (steak->vol == num)
+			return (1);
+
+		steak = steak->next;
+	}
+	return (0);
+}
+
 int init_list(t_all *all, int ac, char **av)
 {
 	int i;
 	long num;
 
 	i = 1;
-	all->start_len = ac - 1;
 	while (i < ac)
 	{
 		if (chk_int(av[i]))
-			return (1);
+			return (put_err(""));
 		else
 		{
 			num = ft_atoi(av[i]);
+			if (check_unique(all->a_stack, (int)num))
+				return (put_err(""));
 			if (num > 2147483647 || num < -2147483648)
-				return (1);
+				return (put_err(""));;
 			ft_lstadd_back(&all->a_stack, ft_lstnew((int)num));
 		}
 		i++;

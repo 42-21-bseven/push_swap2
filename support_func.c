@@ -2,7 +2,7 @@
 
 int	put_err(char *str)
 {
-	printf("ERROR%s\n", str);
+	write(1, "Error\n", ft_strlen("Error\n"));
 	return (1);
 }
 
@@ -35,7 +35,7 @@ void bub_sort(int **arr, int len)
 		j = 0;
 		while (j < len)
 		{
-			if ((*arr)[i] > (*arr)[j])
+			if ((*arr)[i] < (*arr)[j])
 			{
 				n = (*arr)[i];
 				(*arr)[i] = (*arr)[j];
